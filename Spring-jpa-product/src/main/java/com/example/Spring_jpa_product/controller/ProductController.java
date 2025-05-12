@@ -36,10 +36,10 @@ public class ProductController {
     }
 
     @PostMapping("/addProduct")
-    public String addProduct(@ModelAttribute Product product)
+    public String addProduct(@ModelAttribute Product product,RedirectAttributes redirectAttributes)
     {
         productService.addProduct(product);
-        //redirectAttributes.addFlashAttribute("message","Data saved successfully");
+        redirectAttributes.addFlashAttribute("message","Data saved successfully");
         return "redirect:/addProduct";
     }
 
