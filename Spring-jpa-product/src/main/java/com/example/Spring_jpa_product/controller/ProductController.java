@@ -40,7 +40,7 @@ public class ProductController {
     {
         productService.addProduct(product);
         //redirectAttributes.addFlashAttribute("message","Data saved successfully");
-        return "redirect:/";
+        return "redirect:/addProduct";
     }
 
     @GetMapping("/displayAllProducts")
